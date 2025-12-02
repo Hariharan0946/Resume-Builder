@@ -17,7 +17,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-!_frk_*y42wwyv_!b7o@f
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'  # ← Already correct
+
 ALLOWED_HOSTS = ['*']  # ← Already correct
+
+# ADD THESE LINES FOR CSRF FIX:
+CSRF_TRUSTED_ORIGINS = [
+    'https://resume-builder-production-9636.up.railway.app',
+    'https://*.railway.app',
+    'https://*.up.railway.app'
+]
 
 # Application definition
 INSTALLED_APPS = [
