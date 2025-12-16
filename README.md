@@ -45,8 +45,7 @@ Template Rendering
 ↓
 PDF Download
 
-yaml
-Copy code
+
 
 All logic is handled using Django views and templates without relying on models or database operations.
 
